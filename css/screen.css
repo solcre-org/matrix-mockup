@@ -1,0 +1,67 @@
+/* ******************************************** */
+/** GENERIC: SCREEN
+/* ******************************************** */
+
+/* BODY */
+
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+/* html:not(.disable-smooth-scroll){
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-xs);
+} */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 100%;
+    background-color: var(--color-white);
+}
+body, input, textarea, select, button{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--color-black);
+}
+p{
+    text-rendering: optimizeLegibility;
+}
+strong{
+    font-weight: 700;
+}
+em{
+    font-style: italic;
+}
+input, textarea, select, button{
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+input:not([type="checkbox"]):not([type="radio"]), textarea, select, button{
+    -webkit-appearance: none;
+}
+
+button{
+    overflow: visible;
+    font-size: inherit;
+}
+
+a, button{
+    color: var(--color-black);
+    /* -webkit-tap-highlight-color: hsl(var(--color-hover-hsl) / 20%); */
+    cursor: pointer;
+    outline: none;
+}
+
+img{
+    display: inline-block;
+    max-width: 100%;
+}

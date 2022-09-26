@@ -1,0 +1,172 @@
+/* ******************************************** */
+/** SETTINGS: 
+/**     -VARIABLES
+/**     -GENERAL CLASSES OF THE PROJECT: 
+/**         EXAMPLE: BUTTONS USED IN VARIOUS PLACES
+/* ******************************************** */
+:root{
+    --font: 'Kumbh Sans', sans-serif;
+    /* font sizes */
+    --font-size-base: 1.6rem;
+    --font-size-subtitle: 3.6rem;
+    --font-size-title: 5.6rem;
+
+    /* colors */
+    --color-black: #000;
+    --color-white: #ffffff;
+    --color-light-blue-1: #B7DAF9;
+    --color-light-blue-2: #EAF4FF;
+    --color-blue: #00509C;
+    --color-gray-bt: #B2B2B2;
+    --color-gray-banner: #4D4D4D;
+    --color-gray-table: #E7E7E7;
+
+    /* sizes */
+}
+
+/* BUTTONS */
+
+.bt-blue{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 14px;
+}
+
+.bt-blue-download{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 0.5rem 0.7rem ;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    color: var(--color-white);
+}
+
+.bt-blue:hover{
+    background-color: var(--color-gray-bt);
+}
+
+.bt-active{
+    background-color: var(--color-gray-bt);
+}
+
+.bt-light-blue{
+    background-color: var(--color-light-blue-2);
+    color: var(--color-black);
+    font-size: 1.3rem;
+}
+
+.bt-black{
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.bt-border-x{
+    border-bottom: var(--color-blue) solid 0.2rem;
+    border-top: var(--color-blue) solid 0.2rem;
+}
+
+.bt-all-border-blue{
+    border: var(--color-blue) solid 0.2rem;
+    border-radius: 1rem;
+}
+
+.bt-all-border-none{
+    border: var(--color-black) solid 0.2rem;
+    border-radius: 1rem;
+}
+
+.bt-black-active{
+    color: var(--color-blue);
+    /* font-weight: 900; */
+    /* border-top: none; */
+}
+
+.bt-close {
+    color: var(--color-white);
+    position: absolute;
+    right: 0.7rem;
+    top: 4.3rem;
+    font-size: 2rem;
+    background-color: transparent;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: auto;
+}
+
+.bt-close-black{
+    color: var(--color-black);
+}
+
+.bt-eye{
+    width: 3rem;
+    /* background-color: #00509C; */
+    margin-left: -35px;
+    margin-top: -9px;
+    height: 100%;
+    color: var(--color-gray-banner);
+}
+
+.bt-text-gray {
+    color: var(--color-gray-bt);
+    background-color: transparent; 
+}
+
+.bt-text-blue {
+    color: var(--color-blue);
+    background-color: transparent; 
+}
+
+
+/*  */
+.link-blue{
+    font-size: 1.6rem;
+    color: var(--color-blue);
+    font-weight: 700;
+    float: right;
+}
+
+.link-blue i{
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+
+.small-th-text {
+    font-size: 1rem;
+}
+
+.factsheet {
+    width: 100%;
+}
+
+.bg-light-blue{
+    background-color: var(--color-light-blue-2);
+}
+
+.bg_white {
+    background-color: var(--color-white);
+}
+
+.reset-passw{
+    color: var(--color-blue);
+    font-size: 1.4rem;
+    font-weight: bold;
+    float: right;
+    margin-top: 0.2rem;
+
+}
+
+.p-date {
+    color: var(--color-gray-banner);
+}
+
+.bt-text-blue i{
+    padding-left: 0.2rem;
+}
+
+

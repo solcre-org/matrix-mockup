@@ -1,0 +1,44 @@
+.asset__benchmark p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.benchmark__table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin-top: 1rem;
+}
+
+.benchmark__table td{
+    font-size: 1.5rem;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+.benchmark__table td:nth-child(odd){
+    background-color: var(--color-light-blue-2);
+}
+
+.found__table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin-top: 1rem;
+}
+
+.found__table th{
+    font-size: 1.5rem;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.found__table td{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.found__table tr:nth-child(even){
+    background-color: var(--color-gray-table);
+}

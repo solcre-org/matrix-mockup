@@ -1,0 +1,67 @@
+.welcome__access{
+    background-color: var(--color-light-blue-1);
+    position: absolute;
+    right: 0;
+    /* width: aurem; */
+    color: var(--color-gray-banner);
+    /* font-size: 1.4rem; */
+    padding: 1.2rem;
+    padding-right: 9rem;
+    margin-top: -3rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--color-light-blue-2);
+    /* background-color:brown; */
+    margin: 4rem auto 2rem auto;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+.main h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-gray-banner);
+}
+
+.download{
+    margin: 0 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.download table {
+    border-collapse: separate;
+    border-spacing: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.download th{
+    background-color: var(--color-light-blue-2);
+    font-weight: bold;
+    font-size: 1.5rem;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.download td{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.download tr:nth-child(even){
+    background-color: var(--color-gray-table);
+}
+
+.download-i {
+    color: var(--color-gray-banner);
+}
+
