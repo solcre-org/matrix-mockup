@@ -1,15 +1,13 @@
 .info {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
 }
 
 .info__form{
-    margin: 7rem 2rem 2rem 2rem;
+    width: 100%;
     font-size: 1.6rem;
+    display: grid;
+    gap: 1rem;
 }
 
 .no-margin{
@@ -19,24 +17,28 @@
 }
 
 .info__form input{
-    background-color: var(--color-light-blue-2);
-    padding: 1rem;
     width: 100%;
-    margin: 1rem 0 2rem 0;
+    background-color: var(--color-light-blue-2);
+    padding: 1em;
+    width: 100%;
+    font-size: 1em;
+    display: block;
 }
 
 .info__form textarea{
     background-color: var(--color-light-blue-2);
     padding: 1rem;
     width: 100%;
-    margin: 1rem 0 2rem 0;
 }
 
 .info__form textarea, input::placeholder{
     font-size: 1.4rem;
 }
 
-/* .info__form button {
-    margin-left: 35%;
-} */
+.bt-form-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
 

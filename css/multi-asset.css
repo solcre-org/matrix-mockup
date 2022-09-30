@@ -21,24 +21,43 @@
     background-color: var(--color-light-blue-2);
 }
 
-.found__table{
+.asset__fund {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.fund__table{
+    margin: auto;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0.5rem;
     margin-top: 1rem;
 }
 
-.found__table th{
+.fund__table th{
     font-size: 1.5rem;
     vertical-align:middle;
     row-gap: 1rem;
     padding: 1rem;
 }
-.found__table td{
+.fund__table td{
     padding: 1rem;
     font-size: 1.5rem;
 }
 
-.found__table tr:nth-child(even){
+.fund__table tr:nth-child(even){
     background-color: var(--color-gray-table);
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+@media (min-width: 769px) and (max-width: 960px) {
+    .fund__table {
+        width: 80%;
+    }
 }

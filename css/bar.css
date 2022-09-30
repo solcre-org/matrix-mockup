@@ -1,0 +1,125 @@
+.navbar-mobile{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    /* display: none; */
+    position: absolute;
+    /* left: -999px; */
+    top: -2000px;
+    /* opacity: 0; */
+    transition: top 1000ms, opacity 1000ms;
+    z-index: 10;
+}
+
+.bar {
+    display: block;
+    background-color: black;
+    width: 25px;
+    height: 5px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 1000ms, background-color 1000ms;
+}
+
+.show-navbar {
+    /* left: 0; */
+    top: 100px;
+    opacity: 1;
+    display: block; 
+}
+
+#bt {
+    padding: 15px;
+    
+}
+
+.bar::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    background-color: var(--color-black);
+    transition: transform 1000ms, top 1000ms;
+}
+
+.bar::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--color-black);
+    transition: transform 1000ms, top 1000ms;
+}
+
+
+#bt.active .bar::after{
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--color-white);
+}
+
+#bt.active .bar::before{
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--color-white);
+}
+
+#bt.active .bar {
+    transform: rotate(-180deg);
+    background-color: transparent;
+}
+
+#bt.active.color-negro .bar::before {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--color-black);
+}
+#bt.active.color-negro .bar::after {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--color-black);
+}
+
+.menu {
+    width: 200px;
+    margin: auto;
+    padding-top: 5rem;
+    text-align: center;
+    display: grid;
+    row-gap: 2rem;
+}
+
+
+
+.show-nav-flex {
+    display: flex;
+    background-color: var(--color-black);
+    transition: background-color 1000ms;
+}
+
+.show-logo {
+    display: none;
+}
+
+.white-color {
+    background-color: var(--color-white);
+}
+
+.black-color {
+    background-color: var(--color-black);
+}
+
+
+
+.luis {
+    width: 100%;
+    height: 2000px;
+    background-color:blueviolet;
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +12,20 @@
     <!-- favicon  -->
     <link rel="shortcut icon" href="./img/favicon-logo.svg" type="image/x-icon">
     <!-- my styles -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/screen.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/screen.css">
+    <link rel="stylesheet" href="./css/bar.css">
     <link rel="stylesheet" href="./css/settings.css">
     <title> Matrix | Home </title>
 </head>
 <body>
     <!-- header mobile -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="nav">
             <!-- logo -->
-            <div class="navbar__logo-img">
+            <div class="navbar__logo-img" id="switch-logo-blue">
                 <h1> 
                     <span> Matrix asset management </span>
                     <a href="./index.html">
@@ -32,71 +33,67 @@
                     </a>
                 </h1>
             </div>
+            <div class="navbar__logo-img show-logo" id="switch-logo-white">
+                <a href="./index.html">
+                    <img src="./img/matrix-logo-white.png" alt="Logo matrix">
+                </a>
+            </div>
             <!-- dropdown -->
             <div class="navbar__dropdown">
-                <button onclick="show_dropdown()">
-                    <i class="fa-solid fa-bars"></i>
+                <button onclick="show_navbar_movile()" id="bt">
+                    <span class="bar" id="white-color"></span>
+                    <!-- <div class="bar" id="white-color">
+
+                    </div> -->
                 </button>
             </div>
-            <!-- dropdown active -->
-            <div class="dropdown__active" id="show_dropdown" >
-                <button class="bt-close" onclick="close_dropdown()"> x </button>
-                <div class="dropdown__active-bg" >
-                    <div class="navbar__logo-img ">
+        </nav>
+        <div class="navbar-mobile" id="show_navbar_mobile">
+            <div class="menu">
+                <a href="./pages/info.html">
+                    <button class="bt-light-blue bt-blue"> SOLICITAR NFORMACIÓN </button>
+                </a>
+                <ul class="ul-navbar">
+                    <li>
                         <a href="./index.html">
-                            <img src="./img/matrix-logo-white.png" alt="Logo matrix">
+                            <button class="bt-black bt-black-active"> INICIO </button>
                         </a>
-                    </div>
-                    <a href="./pages/info.html">
-                        <button class="bt-light-blue bt-blue"> SOLICITAR NFORMACIÓN </button>
-                    </a>
-                    <ul class="ul-navbar">
-                        <li>
-                            <a href="./index.html">
-                                <button class="bt-black bt-black-active"> INICIO </button>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./pages/founds.html">
-                                <button class="bt-black bt-border-x"> NUESTROS FONDOS </button>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
-                                <button class="bt-black " onclick="show_login()"> ACCESO CLIENTES </button>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="ul-lenguage">
-                        <li>
-                            <a href="#">
-                                <button class="bt-black bt-all-border-blue"> 
-                                    <img src="./img/spain-flag.svg" alt="spain flag">                                    
-                                    ES 
-                                </button>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <button class="bt-black bt-all-border-none">
-                                    <img src="./img/usa-flag.svg" alt="usa-flag">
-                                    EN 
-                                </button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- popup user -->
-                <div class="login" id="login-popup">
-                    <button class="bt-close bt-close-black" onclick="close_login()"> x </button>
-                    <div class="login__active bg_white ">
-                        <div class="navbar__logo-img  ">
-                            <a href="./index.html">
-                                <img src="./img/matrix-logo.png" alt="Logo matrix">
-                            </a>
-                        </div>
-                        <!-- login -->
+                    </li>
+                    <li>
+                        <a href="./pages/founds.html">
+                            <button class="bt-black bt-border-x"> NUESTROS FONDOS </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <button class="bt-black " onclick="show_login()"> ACCESO CLIENTES </button>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="ul-lenguage">
+                    <li>
+                        <a href="#">
+                            <button class="bt-black bt-all-border-blue"> 
+                                <img src="./img/spain-flag.svg" alt="spain flag">                                    
+                                ES 
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <button class="bt-black bt-all-border-none">
+                                <img src="./img/usa-flag.svg" alt="usa-flag">
+                                EN 
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+             <!-- popup user -->
+             <div class="login" id="login-popup">
+                <div class="user-container">
+                    <div class="user-c"> 
                         <div class="login__info" id="login_user">
                             <ul>
                                 <li> 
@@ -110,18 +107,40 @@
                             <form action="" class="info__form no-margin">
                                 <label for=""> Correo electrónico</label>
                                 <input type="email" placeholder="Ingrese su dirección correo electrónico">
-                                <label for=""> Contraseña </label>
-                                <label for="" class="reset-passw"> ¿La olvidaste?</label>
-                                <div class="password-container">
+                                <div class="message-label">
+                                    <label for=""> Contraseña </label>
+                                    <label for="" class="reset-passw"> ¿La olvidaste?</label>
+                                </div>
+                                <div class="password-container" id="view-passw">
                                     <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye"> <i class="fa-regular fa-eye"></i> </button>
+                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
+                                </div>
+                                <div class="password-container-no-view" id="no-view-passw">
+                                    <input type="text" placeholder="Ingrese su contraseña">
+                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
                                 </div>
                             </form>
-                            <a href="./pages/client-access.html">
-                                <button class="bt-blue"> INICIAR SESIÓN</button>
-                            </a>
+                            <div class="bt-form-container" id="bt-login">
+                                <!-- <a href="./pages/client-access.html"> -->
+                                    <button class="bt-blue" onclick="remove_bt_login()"> INICIAR SESIÓN</button>
+                                <!-- </a> -->
+                            </div>
+                            <div class="bt-form-container not-show" id="bt-load">
+                                    <button class="bt-blue hola"> 
+                                        <div class="entering">
+                                            <p> INGRESANDO </p>
+                                            <div id="load"></div>
+                                        </div>
+                                    </button>
+                            </div>
+                            
+                            <div class="bt-form-container">
+                                <label for="" class="error-message"> Correo electrónico o contraseña ingresados incorrectamente</label>
+                            </div>
+                            <!-- <div class="bt-form-container">
+                                <label for="" class="succes-message"> Usuario creado </label>
+                            </div> -->
                         </div>
-                        <!-- create user -->
                         <div class="login__create" id="create_user">
                             <ul>
                                 <li> 
@@ -133,29 +152,55 @@
                                 </li>
                             </ul>
                             <form action="" class="info__form no-margin">
-                                <label for=""> Nombre y apellido</label>
-                                <input type="text" placeholder="Ingrese su nombre y apellido">
-                                <label for=""> Correo electrónico</label>
-                                <input type="text" placeholder="Ingrese su dirección correo electrónico">
-                                <label for=""> Contraseña </label>
-                                <div class="password-container">
-                                    <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye"> <i class="fa-regular fa-eye"></i> </button>
+                                <div class="message-label">
+                                    <label for=""> Nombre y apellido</label>
+                                    <!-- <label for="" class="error-message"> obligatorio </label> -->
                                 </div>
-                                <label for=""> Confirmar ontraseña </label>
-                                <div class="password-container">
+                                <input type="text" placeholder="Ingrese su nombre y apellido">
+                                <div class="message-label">
+                                    <label for=""> Correo electrónico</label>
+                                    <label for="" class="error-message"> Ya existe </label>
+                                </div>
+                                <input type="text" placeholder="Ingrese su dirección correo electrónico">
+                                <div class="message-label">
+                                    <label for=""> Contraseña </label>
+                                    <label for="" class="error-message"> Campo obligatorio</label>
+                                </div>
+                                <div class="password-container" id="view-passw-2">
                                     <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye"> <i class="fa-regular fa-eye"></i> </button>
+                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
+                                </div>
+                                <div class="password-container-no-view" id="no-view-passw-2">
+                                    <input type="text" placeholder="Ingrese su contraseña">
+                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
+                                </div>
+                                <div class="message-label">
+                                    <label for=""> Confirmar contraseña </label>
+                                    <label for="" class="error-message">  No coinciden </label>
+                                </div>
+                                <div class="password-container" id="view-passw-3">
+                                    <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
+                                    <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-regular fa-eye"></i> </button>
+                                </div>
+                                <div class="password-container-no-view" id="no-view-passw-3">
+                                    <input type="text" placeholder="Ingrese su contraseña">
+                                    <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-solid fa-eye-slash"></i></button>
                                 </div>
                             </form>
-                            <button class="bt-blue" onclick="switch_to_login()"> REGISTRARME </button>
+                            <div class="bt-form-container">
+                                <button class="bt-blue" onclick="switch_to_login()"> REGISTRARME </button>
+                            </div>
+                            <div class="bt-form-container">
+                                <label for="" class="succes-message"> Usuario creado </label>
+                            </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+
+        
+        
     </header>
     <main class='main'>
         <section class="welcome">
@@ -171,21 +216,21 @@
                 </p>
             </div>
         </section>
-        <section class="founds">
+        <!-- multi asset fund -->
+        <section class="funds" id="asset">
             <h2></h2>
             <ul>
                 <li>
                     <button class="bt-blue bt-active"> MULTI ASSET FUND</button>
                 </li>
                 <li>
-                    <button class="bt-blue"> EQUITY SELECTION FUND</button>
+                    <button class="bt-blue" onclick="show_equity()"> EQUITY SELECTION FUND</button>
                 </li>
                 <li>
-                    <button class="bt-blue"> SPECIAL SITUATIONS FUND</button>
+                    <button class="bt-blue" onclick="show_special()"> SPECIAL SITUATIONS FUND</button>
                 </li>
             </ul>
-            <!-- multi asset found -->
-            <div class="founds__asset">
+            <div class="funds__asset">
                 <div class="asset__img">
                     <picture> 
                         <img src="./img/man.png" alt="man with a graph">
@@ -249,13 +294,168 @@
                     </a>
                 </div>
             </div>
-
+        </section>
+        <!-- equity selecciont fund -->
+        <section class="funds no-view-passw" id="equity">
+            <h2></h2>
+            <ul>
+                <li>
+                    <button class="bt-blue" onclick="show_asset()"> MULTI ASSET FUND</button>
+                </li>
+                <li>
+                    <button class="bt-blue bt-active"> EQUITY SELECTION FUND</button>
+                </li>
+                <li>
+                    <button class="bt-blue" onclick="show_special_close_equity()"> SPECIAL SITUATIONS FUND</button>
+                </li>
+            </ul>
+            <div class="funds__asset">
+                <div class="asset__img">
+                    <picture> 
+                        <img src="./img/client-access.png" alt="man with a graph">
+                    </picture>
+                </div>
+                <div class="asset__description">
+                    <p>
+                        El objetivo de inversión del fondo <strong> Equity Selection</strong> es el
+                        de apreciación de capital a través de la construcción
+                        de un portfolio de activos líquidos de renta fija y
+                        variable, con un retorno objetivo de Libor + 3 a 5%
+                        por año en un ciclo económico completo con un
+                        adecuado monitoreo del riesgo.
+                    </p>
+                    <a href="./pages/founds.html" class="link-blue"> 
+                        Más información
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="asset__graph">
+                    <picture>
+                        <img src="./img/grafico-multi-asset.png" alt="graph">
+                    </picture>
+                    <p> Evolución temporal de una inversión de USD 1.000</p>
+                </div>
+                <div class="asset__rent">
+                    <div class="rent__head">
+                        <h3> Rentabilidad neta (%) </h3>
+                        <label for="">
+                            31 dic 2021
+                            <button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </label>
+                    </div>
+                    <div class="rent__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th valign="center"> YTD</th>
+                                    <th> 1 año </th>
+                                    <th> 3 años </th>
+                                    <th class="small-th-text"> Since Inception </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 6,46%</td>
+                                    <td> 8%</td>
+                                    <td> 10%</td>
+                                    <td> 12%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="factsheet">
+                    <a href="#" class="link-blue"> 
+                        Descargar factsheet
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- special situations fund -->
+        <section class="funds no-view-passw" id="special">
+            <h2></h2>
+            <ul>
+                <li>
+                    <button class="bt-blue " onclick="show_asset_close_special()"> MULTI ASSET FUND</button>
+                </li>
+                <li>
+                    <button class="bt-blue" onclick="show_equity_close_special()"> EQUITY SELECTION FUND</button>
+                </li>
+                <li>
+                    <button class="bt-blue bt-active"> SPECIAL SITUATIONS FUND</button>
+                </li>
+            </ul>
+            <div class="funds__asset">
+                <div class="asset__img">
+                    <picture> 
+                        <img src="./img/banner-mobile.png" alt="man with a graph">
+                    </picture>
+                </div>
+                <div class="asset__description">
+                    <p>
+                        El objetivo de inversión del fondo <strong> Special Situation</strong> es el
+                        de apreciación de capital a través de la construcción
+                        de un portfolio de activos líquidos de renta fija y
+                        variable, con un retorno objetivo de Libor + 3 a 5%
+                        por año en un ciclo económico completo con un
+                        adecuado monitoreo del riesgo.
+                    </p>
+                    <a href="./pages/founds.html" class="link-blue"> 
+                        Más información
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="asset__graph">
+                    <picture>
+                        <img src="./img/grafico-multi-asset.png" alt="graph">
+                    </picture>
+                    <p> Evolución temporal de una inversión de USD 1.000</p>
+                </div>
+                <div class="asset__rent">
+                    <div class="rent__head">
+                        <h3> Rentabilidad neta (%) </h3>
+                        <label for="">
+                            31 dic 2021
+                            <button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </label>
+                    </div>
+                    <div class="rent__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th valign="center"> YTD</th>
+                                    <th> 1 año </th>
+                                    <th> 3 años </th>
+                                    <th class="small-th-text"> Since Inception </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 6,46%</td>
+                                    <td> 8%</td>
+                                    <td> 10%</td>
+                                    <td> 12%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="factsheet">
+                    <a href="#" class="link-blue"> 
+                        Descargar factsheet
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/374c27b176.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
     <!-- my scripts  -->
     <script src="./js/app.js"></script>
 </body>

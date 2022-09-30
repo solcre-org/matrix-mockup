@@ -1,6 +1,9 @@
 .main p{
     font-size: 1.6rem;
 }
+.main {
+    margin-bottom: 5rem;
+}
 
 .navbar{
     width: 100%;
@@ -8,6 +11,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-white);
+    transition: background-color 400ms;
+    position: relative;
+    z-index: 100;
 }
 
 .h1-logo{
@@ -24,10 +31,10 @@
 }
 
 .navbar__dropdown{
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     position: absolute;
     right: 2rem;
-    top: 5.5rem;
+    top: 4.7rem;
     
 }
 
@@ -35,7 +42,7 @@
     position: absolute;
     background: rgba(0,0,0,0.8);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -43,8 +50,8 @@
     z-index: 100;
     align-items: flex-start;
     display: none;
+    overflow: scroll;
 }
-
 
 .dropdown__active-bg{
     width: 100%;
@@ -59,6 +66,7 @@
 
 .ul-lenguage {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     margin-bottom: 3rem;
 }
@@ -75,23 +83,39 @@
     background: var(--color-white);
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -2000px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    z-index: 200;
-    align-items: flex-start;
-    display: none;
+    /* z-index: 200; */
+    /* align-items: flex-start; */
+    /* display: none; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
+    transition: top 1000ms, opacity 1000ms;
 }
 
-.login__info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
+.show{
+    top: 0px;
+    display: block;
+}
+
+.user-container {
+    /* background-color: aqua; */
+    width: 100%;
+    margin-top: 5rem;
+    /* height: 100%; */
+
+}
+
+.user-c {
+    width: 80%;
+    /* padding: 0 5rem 0 5rem; */
+    /* height: 100%; */
+    background-color: white;
+    margin: auto;
 }
 
 .login__info ul{
@@ -101,17 +125,7 @@
 }
 
 .login__create {
-    height: 100%;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     display: none;
-
-}
-
-.show-flex{
-    display: flex;
 }
 
 .login__create ul{
@@ -122,7 +136,6 @@
 
 .login__active{
     width: 100%;
-    background-color: var(--color-black);
     padding: 5rem 2rem 2rem;
     display: flex;
     flex-direction: column;
@@ -130,18 +143,25 @@
     justify-content: center;
     row-gap: 1.5rem;
     height: 100%;
-
 }
+
+.show-flex{
+    display: block;
+}
+
 
 .password-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* position: relative; */
 }
 
-
-
-
+.password-container-no-view {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
 .welcome__description{
     background-color: var(--color-light-blue-1);
@@ -155,24 +175,25 @@
     border-radius: 1rem 0 0 1rem;
 }
 
-.founds{
+
+.funds{
     margin: 2rem 2rem;
 }
-.founds h2 {
+.funds h2 {
     margin: 6rem 0 2rem 0;
     font-size:2rem;
     font-weight: 900;
     color: var(--color-gray-banner);
 }
 
-.founds h3 {
+.funds h3 {
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--color-gray-banner);
 
 }
 
-.founds ul{
+.funds ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -180,16 +201,29 @@
     /* font-size: 1.5rem; */
 }
 
-.founds__asset{
+.funds__asset{
     margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     row-gap: 2rem;
 }
 
+.asset__graph {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .asset__graph p {
     margin-top: 1rem;
+}
+
+.asset__rent {
+    width: 100%;
+
 }
 
 .asset__rent label {
@@ -207,6 +241,7 @@
 .rent__table {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .rent__table table{
@@ -214,7 +249,7 @@
     text-align: center;
     border-collapse: separate;
     border-spacing: 0.5rem;
-    margin-top: 1rem;
+    margin: auto;
 }
 
 .rent__table th{
@@ -236,9 +271,11 @@
 }
 
 
-.show{
-    display: block;
-}
+
+/* 
+.show-login{
+
+} */
 
 .not-show{
     display: none;
@@ -251,13 +288,48 @@
 /* bloquear el menu */
 /* html, body {margin: 0; height: 100%; overflow: hidden} */
 
-
-
 .preventscroll{
     position: fixed;
     overflow-y:scroll;
+    height: 100%;
+    width: 100%;
 }
 
+
+
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .welcome__description {
+        width: 44rem;
+    }
+
+    .asset__graph {
+        width: 80%; 
+    }
+
+    .login__ {
+        width: 100%;
+        /* width: 400px; */
+    }
+}
+@media (min-width: 769px) and (max-width: 960px) {
+    .welcome__description {
+        width: 60rem;
+        margin-top: -4.5rem;
+    }
+
+    .asset__graph {
+        width: 70%; 
+    }
+
+    .rent__table table{
+        width: 80%;
+    }
+}
 
 
 

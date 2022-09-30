@@ -31,16 +31,28 @@
 }
 
 .download{
-    margin: 0 2rem 0 2rem;
+    width: 100%;
+    /* margin: auto; */
+    padding: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    row-gap: 2rem;
+}
+
+.h3-download{
+    width: 100%;
 }
 
 .download table {
+    width: 100%;
+    /* margin: 1rem auto 2rem auto; */
     border-collapse: separate;
     border-spacing: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    /* margin-top: 1rem; */
+    /* margin-bottom: 2rem; */
 
 }
 
@@ -49,7 +61,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     vertical-align:middle;
-    row-gap: 1rem;
+    /* row-gap: 1rem; */
     padding: 1rem;
 }
 .download td{
@@ -63,5 +75,14 @@
 
 .download-i {
     color: var(--color-gray-banner);
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+@media (min-width: 769px) and (max-width: 960px) {
+    .download table {
+        width: 80%;
+    }
 }
 
