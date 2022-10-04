@@ -60,4 +60,18 @@
     .fund__table {
         width: 80%;
     }
+
+    /* .fund__table table{
+        width: 100%;
+    } */
+}
+
+@media (min-width: 961px) {
+
+    .asset__description {
+        margin: 2rem 8rem;
+    }
+
+
+
 }

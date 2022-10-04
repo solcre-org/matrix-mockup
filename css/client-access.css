@@ -86,3 +86,37 @@
     }
 }
 
+@media (min-width: 961px) {
+    .container-access{
+        display: flex;
+        /* column-gap: 5rem; */
+    }
+
+    .user__info {
+        padding-top: 3rem;
+        text-align: none;
+        height: 14rem;
+        /* width: rem; */
+        margin-left: 0;
+    }
+
+    .download {
+        width: 80%;
+        margin-top: 2rem;
+        text-align: center;
+        /* margin-left: -10rem; */
+    }
+    
+    .download table{
+        width: 70%;
+    }
+
+    .welcome__access {
+        width: 40rem;
+    }
+
+
+
+}
+
+

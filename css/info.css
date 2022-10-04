@@ -1,6 +1,7 @@
 .info {
     width: 100%;
     padding: 5rem 2rem 2rem 2rem;
+    /* margin: auto; */
 }
 
 .info__form{
@@ -8,6 +9,7 @@
     font-size: 1.6rem;
     display: grid;
     gap: 1rem;
+    /* margin: auto; */
 }
 
 .no-margin{
@@ -42,3 +44,44 @@
 }
 
 
+@media (min-width: 961px) {
+    /* .main {
+        margin-bottom: 5rem;
+    } */
+    .container {
+        display: grid;
+        row-gap: 1rem;
+        width: 45%;
+    }
+
+    .container-textarea {
+        display: grid;
+        row-gap: 1rem;
+        width: 45%;
+        height: 15rem;
+    }
+
+    .to-flex {
+        display: flex;
+        width: 70%;
+        margin: auto;
+        column-gap: 4rem;
+        /* z-index: 2000; */
+        flex-wrap: wrap;
+
+    }
+
+    .media-w{
+        width: 45%;
+        margin-top: 7rem;
+        margin-left: -7rem;
+    }
+
+    
+
+    .login__info ul{
+        font-size: 1.6rem;
+    }
+
+
+}

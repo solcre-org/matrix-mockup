@@ -40,16 +40,52 @@
                     <img src="../img/matrix-logo-white.png" alt="Logo matrix">
                 </a>
             </div>
-            <!-- dropdown -->
+            <div class="navbar__destock"> 
+                <ul class="navbar__destock-ul-1">
+                    <li>
+                        <a href="../index.html">
+                            <button class="bt-black-nav-destock"> INICIO </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./founds.html">
+                            <button class="bt-black-nav-destock bt-black-nav-destock-not"> NUESTROS FONDOS </button>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <button class="bt-black-nav-destock bt-black-nav-destock-not" onclick="show_login()"> ACCESO CLIENTES </button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar__destock-ul-2">
+                    <a href="./info.html">
+                        <button class="bt-blue"> SOLICITAR NFORMACIÓN </button>
+                    </a>
+                    <div class="container-switch-lenguaje">
+                        <div class="switch-lenguaje">
+                            <button class="bt-blue bt-lenguage" id="bt-esp" > 
+                                <img src="../img/spain-flag.svg" alt="bandera de espana" class="label-es">
+                                ES
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <button class="bt-blue bt-lenguage usa" id="bt-usa" onclick="switch_lenguage()"> 
+                                <img src="../img/usa-flag.svg" alt="bandera de espana" class="label-es">
+                                EN
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <!-- dropdown bt-->
             <div class="navbar__dropdown">
                 <button onclick="show_navbar_movile()" id="bt">
                     <span class="bar" id="white-color"></span>
-                    <!-- <div class="bar" id="white-color">
-
-                    </div> -->
                 </button>
             </div>
-        </nav>
+        </nav>        
         <div class="navbar-mobile" id="show_navbar_mobile">
             <div class="menu">
                 <a href="./info.html">
@@ -62,8 +98,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./founds.html">
-                            <button class="bt-black bt-border-x "> NUESTROS FONDOS </button>
+                        <a href="./pages/founds.html">
+                            <button class="bt-black bt-border-x"> NUESTROS FONDOS </button>
                         </a>
                     </li>
                     
@@ -92,121 +128,129 @@
                     </li>
                 </ul>
             </div>
-             <!-- popup user -->
-             <div class="login" id="login-popup">
-                <div class="user-container">
-                    <div class="user-c"> 
-                        <div class="login__info" id="login_user">
-                            <ul>
-                                <li> 
-                                    <button class="bt-text-gray"> Iniciar sesión </button>
-                                </li> 
-                                <label for=""> | </label>
-                                <li> 
-                                    <button class="bt-text-blue" onclick="switch_to_create()"> Crear nuevo usuario </button>
-                                </li>
-                            </ul>
-                            <form action="" class="info__form no-margin">
-                                <label for=""> Correo electrónico</label>
-                                <input type="email" placeholder="Ingrese su dirección correo electrónico">
-                                <div class="message-label">
-                                    <label for=""> Contraseña </label>
-                                    <label for="" class="reset-passw"> ¿La olvidaste?</label>
-                                </div>
-                                <div class="password-container" id="view-passw">
-                                    <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
-                                </div>
-                                <div class="password-container-no-view" id="no-view-passw">
-                                    <input type="text" placeholder="Ingrese su contraseña">
-                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
-                                </div>
-                            </form>
-                            <div class="bt-form-container" id="bt-login">
-                                <!-- <a href="./pages/client-access.html"> -->
-                                    <button class="bt-blue" onclick="remove_bt_login()"> INICIAR SESIÓN</button>
-                                <!-- </a> -->
+             
+        </div>
+
+        
+
+        
+        
+    </header>
+    
+    <main class='main'>
+        <!-- popup user -->
+        <div class="login" id="login-popup">
+            <div class="user-container">
+                <div class="user-c"> 
+                    <button class="bt-close-login" onclick="close_login()"> x</button>
+                    <div class="login__info" id="login_user">
+                        <ul>
+                            <li> 
+                                <button class="bt-text-gray"> Iniciar sesión </button>
+                            </li> 
+                            <label for=""> | </label>
+                            <li> 
+                                <button class="bt-text-blue" onclick="switch_to_create()"> Crear nuevo usuario </button>
+                            </li>
+                        </ul>
+                        <form action="" class="info__form no-margin">
+                            <label for=""> Correo electrónico</label>
+                            <input type="email" placeholder="Ingrese su dirección correo electrónico">
+                            <div class="message-label">
+                                <label for=""> Contraseña </label>
+                                <label for="" class="reset-passw"> ¿La olvidaste?</label>
                             </div>
-                            <div class="bt-form-container not-show" id="bt-load">
-                                    <button class="bt-blue hola"> 
-                                        <div class="entering">
-                                            <p> INGRESANDO </p>
-                                            <div id="load"></div>
-                                        </div>
-                                    </button>
+                            <div class="password-container" id="view-passw">
+                                <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
+                                <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
                             </div>
-                            
-                            <div class="bt-form-container">
-                                <label for="" class="error-message"> Correo electrónico o contraseña ingresados incorrectamente</label>
+                            <div class="password-container-no-view" id="no-view-passw">
+                                <input type="text" placeholder="Ingrese su contraseña">
+                                <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
                             </div>
-                            <!-- <div class="bt-form-container">
-                                <label for="" class="succes-message"> Usuario creado </label>
-                            </div> -->
+                        </form>
+                        <div class="bt-form-container" id="bt-login">
+                            <!-- <a href="./pages/client-access.html"> -->
+                                <button class="bt-blue" onclick="remove_bt_login()"> INICIAR SESIÓN</button>
+                            <!-- </a> -->
                         </div>
-                        <div class="login__create" id="create_user">
-                            <ul>
-                                <li> 
-                                    <button class="bt-text-blue" onclick="switch_to_login()"> Iniciar sesión </button>
-                                </li> 
-                                <label for=""> | </label>
-                                <li> 
-                                    <button class="bt-text-gray"> Crear nuevo usuario </button>
-                                </li>
-                            </ul>
-                            <form action="" class="info__form no-margin">
-                                <div class="message-label">
-                                    <label for=""> Nombre y apellido</label>
-                                    <!-- <label for="" class="error-message"> obligatorio </label> -->
-                                </div>
-                                <input type="text" placeholder="Ingrese su nombre y apellido">
-                                <div class="message-label">
-                                    <label for=""> Correo electrónico</label>
-                                    <label for="" class="error-message"> Ya existe </label>
-                                </div>
-                                <input type="text" placeholder="Ingrese su dirección correo electrónico">
-                                <div class="message-label">
-                                    <label for=""> Contraseña </label>
-                                    <label for="" class="error-message"> Campo obligatorio</label>
-                                </div>
-                                <div class="password-container" id="view-passw-2">
-                                    <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
-                                </div>
-                                <div class="password-container-no-view" id="no-view-passw-2">
-                                    <input type="text" placeholder="Ingrese su contraseña">
-                                    <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
-                                </div>
-                                <div class="message-label">
-                                    <label for=""> Confirmar contraseña </label>
-                                    <label for="" class="error-message">  No coinciden </label>
-                                </div>
-                                <div class="password-container" id="view-passw-3">
-                                    <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
-                                    <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-regular fa-eye"></i> </button>
-                                </div>
-                                <div class="password-container-no-view" id="no-view-passw-3">
-                                    <input type="text" placeholder="Ingrese su contraseña">
-                                    <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-solid fa-eye-slash"></i></button>
-                                </div>
-                            </form>
-                            <div class="bt-form-container">
-                                <button class="bt-blue" onclick="switch_to_login()"> REGISTRARME </button>
+                        <div class="bt-form-container not-show" id="bt-load">
+                                <button class="bt-blue hola"> 
+                                    <div class="entering">
+                                        <p> INGRESANDO </p>
+                                        <div id="load"></div>
+                                    </div>
+                                </button>
+                        </div>
+                        
+                        <div class="bt-form-container">
+                            <label for="" class="error-message"> Correo electrónico o contraseña ingresados incorrectamente</label>
+                        </div>
+                        <!-- <div class="bt-form-container">
+                            <label for="" class="succes-message"> Usuario creado </label>
+                        </div> -->
+                    </div>
+                    <div class="login__create" id="create_user">
+                        <ul>
+                            <li> 
+                                <button class="bt-text-blue" onclick="switch_to_login()"> Iniciar sesión </button>
+                            </li> 
+                            <label for=""> | </label>
+                            <li> 
+                                <button class="bt-text-gray"> Crear nuevo usuario </button>
+                            </li>
+                        </ul>
+                        <form action="" class="info__form no-margin">
+                            <div class="message-label">
+                                <label for=""> Nombre y apellido</label>
+                                <!-- <label for="" class="error-message"> obligatorio </label> -->
                             </div>
-                            <div class="bt-form-container">
-                                <label for="" class="succes-message"> Usuario creado </label>
+                            <input type="text" placeholder="Ingrese su nombre y apellido">
+                            <div class="message-label">
+                                <label for=""> Correo electrónico</label>
+                                <label for="" class="error-message"> Ya existe </label>
                             </div>
+                            <input type="text" placeholder="Ingrese su dirección correo electrónico">
+                            <div class="message-label">
+                                <label for=""> Contraseña </label>
+                                <label for="" class="error-message"> Campo obligatorio</label>
+                            </div>
+                            <div class="password-container" id="view-passw-2">
+                                <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
+                                <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-regular fa-eye"></i> </button>
+                            </div>
+                            <div class="password-container-no-view" id="no-view-passw-2">
+                                <input type="text" placeholder="Ingrese su contraseña">
+                                <button type="button" class="bt-eye" onclick="show_passw()"> <i class="fa-solid fa-eye-slash"></i></button>
+                            </div>
+                            <div class="message-label">
+                                <label for=""> Confirmar contraseña </label>
+                                <label for="" class="error-message">  No coinciden </label>
+                            </div>
+                            <div class="password-container" id="view-passw-3">
+                                <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
+                                <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-regular fa-eye"></i> </button>
+                            </div>
+                            <div class="password-container-no-view" id="no-view-passw-3">
+                                <input type="text" placeholder="Ingrese su contraseña">
+                                <button type="button" class="bt-eye" onclick="show_passw_2()"> <i class="fa-solid fa-eye-slash"></i></button>
+                            </div>
+                        </form>
+                        <div class="bt-form-container">
+                            <button class="bt-blue" onclick="switch_to_login()"> REGISTRARME </button>
+                        </div>
+                        <div class="bt-form-container">
+                            <label for="" class="succes-message"> Usuario creado </label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        
-        
-    </header>
-    <main class='main'>
+
         <section class="welcome">
             <picture>
+                <source srcset="../img/acces-destock.png" media="(min-width:961px)">
                 <img src="../img/client-access.png" alt="building image" >
             </picture>
             <div class="welcome__access">
@@ -215,141 +259,145 @@
                 </p>
             </div>
         </section>
-        <section class="user__info">
-            <p class="p-date"> Viernes 1 de abril del 2022</p>
-            <h3> ¡Hola, Juan!</h3>
-            <a href="../index.html">
-                <button class="bt-text-blue"> 
-                    Cerrar sesión  
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                </button>
-            </a>
-        </section>
-        <section class="download">
-            <div class="h3-download">
-                <h3> Descargar </h3>
-
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th> Nombre de archivo </th>
-                        <th> Fecha </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <i class="fa-solid fa-file download-i"></i> 
-                            Factsheet MMAF 30.04.2019.pdf
-                        </td>
-                        <td>
-                            30.04.2019 
-                        </td>
-                        <td class="bg_white">
-                            <button class="bt-blue-download">
-                                <i class="fa-solid fa-download"></i>
-
-                            </button>
-                        </td>
-                    </tr>
 
 
-
-                </tbody>
-            </table>
-        </section>
+        <div class="container-access">
+            <section class="user__info">
+                <p class="p-date"> Viernes 1 de abril del 2022</p>
+                <h3> ¡Hola, Juan!</h3>
+                <a href="../index.html">
+                    <button class="bt-text-blue"> 
+                        Cerrar sesión  
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </a>
+            </section>
+            <section class="download">
+                <div class="h3-download">
+                    <h3> Descargar </h3>
+    
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Nombre de archivo </th>
+                            <th> Fecha </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <i class="fa-solid fa-file download-i"></i> 
+                                Factsheet MMAF 30.04.2019.pdf
+                            </td>
+                            <td>
+                                30.04.2019 
+                            </td>
+                            <td class="bg_white">
+                                <button class="bt-blue-download">
+                                    <i class="fa-solid fa-download"></i>
+    
+                                </button>
+                            </td>
+                        </tr>
+    
+    
+    
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/374c27b176.js" crossorigin="anonymous"></script>
