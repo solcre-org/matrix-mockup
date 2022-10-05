@@ -4,7 +4,8 @@ let body = document.body;
 
 
 //=============================================================================
-//  founds start
+//  change between funds
+
 let equity = document.getElementById('equity');
 let asset = document.getElementById('asset');
 let special = document.getElementById('special');
@@ -44,7 +45,8 @@ function show_equity_close_special() {
 }
 
 //=============================================================================
-// password start
+// show and hide password
+
 let view_passw = document.getElementById('no-view-passw');
 let no_view_passw = document.getElementById('view-passw');
 let view_passw_2 = document.getElementById('no-view-passw-2');
@@ -66,7 +68,8 @@ function show_passw_2() {
 }
 
 //=============================================================================
-// switch login / create
+// switch login between create
+
 let login = document.getElementById('login_user');
 let create = document.getElementById('create_user');
 
@@ -84,6 +87,7 @@ function switch_to_login() {
 
 //=============================================================================
 // login popup
+
 let login_popup = document.getElementById('login-popup')
 let switch_ = login_popup.classList.contains('show');
 
@@ -93,9 +97,7 @@ function show_login(){
     if (windowWidth > 960){
         body.classList.toggle('preventscroll');
     }
-    
     if (!switch_){
-
         if (windowWidth < 961){
             nav.classList.toggle('show-nav-flex');
             logo_white.classList.toggle('show-logo');
@@ -105,17 +107,9 @@ function show_login(){
 
         }
         login_popup.classList.add('show');
-
-
-        // bt_color.classList.toggle('active');
-        // icon_menu()
-        // menu_icon.classList.toggle('black-color');
-        // menu_icon.classList.toggle('white-color');
-        
-
-        console.log('entre a add')
+        // console.log('entre a add')
     } 
-    console.log(login_popup)
+    // console.log(login_popup)
 }
 
 function close_login (){
@@ -125,6 +119,7 @@ function close_login (){
 
 //=============================================================================
 // bt loading in login and redirect to client-accces
+
 let bt_login = document.getElementById('bt-login');
 let bt_load = document.getElementById('bt-load');
 
@@ -140,6 +135,7 @@ function show_bt_login(){
 }
 
 //=============================================================================
+// navbar
 
 let show_mobile = document.getElementById('show_navbar_mobile');
 let nav = document.getElementById('nav')
@@ -149,8 +145,7 @@ let menu_icon = document.getElementById('white-color')
 let bt_color = document.getElementById('bt')
 
 function show_navbar_movile() {
-    console.log('hola')
-
+    // console.log('hola')
     show_mobile.classList.toggle('show-navbar');
     icon_menu();
     nav.classList.toggle('show-nav-flex');
@@ -165,15 +160,9 @@ function show_navbar_movile() {
         logo_white.classList.toggle('show-logo');
         logo_blue.classList.toggle('show-logo');
         bt_color.classList.toggle('color-negro');
-        // bt_color.classList.toggle('active');
-        // icon_menu();
     }
-    console.log(nav)
-
-
+    // console.log(nav)
 }
-
-
 
 function icon_menu() {
     bt_color.classList.toggle('active');
@@ -182,6 +171,7 @@ function icon_menu() {
 }
 
 //=============================================================================
+// change lenguage
 
 let bt_usa = document.getElementById('bt-usa');
 let bt_esp = document.getElementById('bt-esp');
@@ -190,4 +180,14 @@ function switch_lenguage(){
     // bt_usa.classList.toggle('show-lenguage');
     bt_esp.classList.toggle('not-show-lenguage');
     console.log(bt_esp)
+}
+
+//=============================================================================
+// show change password
+
+let change_password = document.getElementById('change-password')
+function close_change_pass() {
+    
+    change_password.classList.toggle('show-password')
+
 }

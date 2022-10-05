@@ -2,9 +2,7 @@
     background-color: var(--color-light-blue-1);
     position: absolute;
     right: 0;
-    /* width: aurem; */
     color: var(--color-gray-banner);
-    /* font-size: 1.4rem; */
     padding: 1.2rem;
     padding-right: 9rem;
     margin-top: -3rem;
@@ -18,7 +16,6 @@
     border-radius: 1rem;
     padding: 1rem;
     background-color: var(--color-light-blue-2);
-    /* background-color:brown; */
     margin: 4rem auto 2rem auto;
     text-align: center;
     row-gap: 1rem;
@@ -32,13 +29,11 @@
 
 .download{
     width: 100%;
-    /* margin: auto; */
     padding: 2rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     row-gap: 2rem;
 }
 
@@ -48,12 +43,8 @@
 
 .download table {
     width: 100%;
-    /* margin: 1rem auto 2rem auto; */
     border-collapse: separate;
     border-spacing: 1rem;
-    /* margin-top: 1rem; */
-    /* margin-bottom: 2rem; */
-
 }
 
 .download th{
@@ -61,7 +52,6 @@
     font-weight: bold;
     font-size: 1.5rem;
     vertical-align:middle;
-    /* row-gap: 1rem; */
     padding: 1rem;
 }
 .download td{
@@ -89,14 +79,12 @@
 @media (min-width: 961px) {
     .container-access{
         display: flex;
-        /* column-gap: 5rem; */
     }
 
     .user__info {
         padding-top: 3rem;
         text-align: none;
         height: 14rem;
-        /* width: rem; */
         margin-left: 0;
     }
 
@@ -104,7 +92,6 @@
         width: 80%;
         margin-top: 2rem;
         text-align: center;
-        /* margin-left: -10rem; */
     }
     
     .download table{
@@ -114,9 +101,4 @@
     .welcome__access {
         width: 40rem;
     }
-
-
-
 }
-
-

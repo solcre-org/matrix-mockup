@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- google fonts -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lora&family=Orbitron&family=Roboto+Serif:opsz,wght@8..144,100;8..144,500&family=Work+Sans:wght@100;300;400;500&display=swap" rel="stylesheet">
-    <!-- favicon  -->
+    <!-- FAVICON  -->
     <link rel="shortcut icon" href="../img/favicon-logo.svg" type="image/x-icon">
-    <!-- my styles -->
+    <!-- MY STYLES -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/screen.css">
     <link rel="stylesheet" href="../css/multi-asset.css">
@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/bar.css">
     <link rel="stylesheet" href="../css/settings.css">
-    <title> Matrix | Home </title>
+    <title> Matrix | FOUNDS </title>
 </head>
+<!-- BODY -->
 <body>
-    <!-- header mobile -->
+    <!-- HEADER -->
     <header>
+        <!-- NAVBAR DESTOCK -->
         <nav class="navbar" id="nav">
-            <!-- logo -->
+            <!-- LOGO -->
             <div class="navbar__logo-img" id="switch-logo-blue">
                 <h1> 
                     <span> Matrix asset management </span>
@@ -72,19 +74,20 @@
                             <button class="bt-blue bt-lenguage usa" id="bt-usa" onclick="switch_lenguage()"> 
                                 <img src="../img/usa-flag.svg" alt="bandera de espana" class="label-es">
                                 EN
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <!-- <i class="fa-solid fa-chevron-down"></i> -->
                             </button>
                         </div>    
                     </div>
                 </div>
             </div>
-            <!-- dropdown bt-->
+            <!-- DROPDOWN BT-->
             <div class="navbar__dropdown">
                 <button onclick="show_navbar_movile()" id="bt">
                     <span class="bar" id="white-color"></span>
                 </button>
             </div>
-        </nav>        
+        </nav>
+        <!-- NAVBAR MOBILE -->
         <div class="navbar-mobile" id="show_navbar_mobile">
             <div class="menu">
                 <a href="./info.html">
@@ -129,18 +132,51 @@
             </div>
              
         </div>
-
-        
-
-        
-        
     </header>
+    <!-- MAIN -->
     <main class='main'>
-        <!-- popup user -->
+        <!-- POPUP USER CONTAINER -->
         <div class="login" id="login-popup">
             <div class="user-container">
+                <!-- CHANGE PASSWORD -->
+                <div class="change-password" id="change-password">
+                    <div class="back">
+                        <button onclick="close_change_pass()"> 
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="login__info">
+                        <form action="" class="info__form no-margin">
+                            <label for=""> Correo electrónico</label>
+                            <input type="email" placeholder="Ingrese su dirección correo electrónico">
+                        </form>
+                        <div class="bt-form-container" id="bt-login">
+                            <!-- <a href="./pages/client-access.html"> -->
+                                <button class="bt-blue" > ENVIAR</button>
+                            <!-- </a> -->
+                        </div>
+                        <div class="bt-form-container not-show" id="bt-load">
+                                <button class="bt-blue hola"> 
+                                    <div class="entering">
+                                        <p> ENVIANDO </p>
+                                        <div id="load"></div>
+                                    </div>
+                                </button>
+                        </div>
+                        
+                        <div class="bt-form-container">
+                            <label for="" class="error-message"> Correo electrónico ingresado incorrectamente</label>
+                        </div>
+                        <!-- <div class="bt-form-container">
+                            <label for="" class="succes-message"> Usuario creado </label>
+                        </div> -->
+                    </div>
+    
+                </div>
+                <!-- SHOW POPUP LOGIN -->
                 <div class="user-c"> 
                     <button class="bt-close-login" onclick="close_login()"> x</button>
+                    <!-- LOGIN USER -->
                     <div class="login__info" id="login_user">
                         <ul>
                             <li> 
@@ -156,7 +192,10 @@
                             <input type="email" placeholder="Ingrese su dirección correo electrónico">
                             <div class="message-label">
                                 <label for=""> Contraseña </label>
-                                <label for="" class="reset-passw"> ¿La olvidaste?</label>
+                                <button>
+                                    <label for="" class="reset-passw" onclick="close_change_pass()"> ¿La olvidaste?</label>
+
+                                </button>
                             </div>
                             <div class="password-container" id="view-passw">
                                 <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">
@@ -188,6 +227,7 @@
                             <label for="" class="succes-message"> Usuario creado </label>
                         </div> -->
                     </div>
+                    <!-- CREATE USER -->
                     <div class="login__create" id="create_user">
                         <ul>
                             <li> 
@@ -244,15 +284,15 @@
                 </div>
             </div>
         </div>
-
+        <!-- WELCOME MESSAGE -->
         <section class="welcome">
             <picture>
                 <source srcset="../img/multi-asset-destock.png" media="(min-width:961px)">
                 <img src="../img/multi-asset.png" alt="building image" >
             </picture>
         </section>
-        <!-- multi asset found -->
-        <section class="funds" id="asset">
+        <!-- MULTI ASSET -->
+        <section class="funds justify-center" id="asset">
             <ul>
                 <li>
                     <button class="bt-blue bt-active"> MULTI ASSET FUND</button>
@@ -438,8 +478,8 @@
                 </div>
             </div>
         </section>
-        <!-- equity selection found -->
-        <section class="funds no-view-passw" id="equity">
+        <!-- EQUITY SELECTION -->
+        <section class="funds no-view-passw justify-center" id="equity">
             <ul>
                 <li>
                     <button class="bt-blue" onclick="show_asset()"> MULTI ASSET FUND</button>
@@ -626,8 +666,8 @@
             </div>
 
         </section>
-        <!-- special situation found -->
-        <section class="funds no-view-passw" id="special">
+        <!-- SPECIAL SITUATIONS -->
+        <section class="funds no-view-passw justify-center" id="special">
             <ul>
                 <li>
                     <button class="bt-blue " onclick="show_asset_close_special()"> MULTI ASSET FUND</button>
@@ -814,589 +854,10 @@
             </div>
 
         </section>
-
-
-
-        <!-- <section class="funds" id="asset">
-            <ul>
-                <li>
-                    <button class="bt-blue bt-active"> MULTI ASSET FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue" onclick="show_equity()"> EQUITY SELECTION FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue" onclick="show_special()"> SPECIAL SITUATIONS FUND</button>
-                </li>
-            </ul>
-            <div class="funds__asset">
-                <div class="asset__img">
-                    <picture> 
-                        <img src="../img/man.png" alt="man with a graph">
-                    </picture>
-                </div>
-                <div class="asset__description">
-                    <p>
-                        El objetivo de inversión del fondo <strong> Multi Asset</strong> es el
-                        de apreciación de capital a través de la construcción
-                        de un portfolio de activos líquidos de renta fija y
-                        variable, con un retorno objetivo de Libor + 3 a 5%
-                        por año en un ciclo económico completo con un
-                        adecuado monitoreo del riesgo.
-                        <br><br>
-                        El fondo invierte 80% o más de sus activos en
-                        posiciones estratégicas de renta fija y acciones
-                        globales. En forma oportunística, el manager puede
-                        asignar hasta un 20% de los activos a posiciones
-                        tácticas en bonos, acciones, monedas y commodities
-                        para explotar la detección de activos desarbitrados
-                        y obtener rendimientos de corto plazo.
-                    </p>
-                </div>
-                <div class="asset__benchmark">
-                    <h3> Benchmark</h3>
-                    <table class="benchmark__table">
-                        <tbody>
-                            <tr>
-                                <td> 30%</td>
-                                <td> Barclays Global Aggregate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 15%</td>
-                                <td> JP Morgan EMBI Global USD</td>
-                            </tr>
-                            <tr>
-                                <td> 10%</td>
-                                <td> Barclays US High Yield Corporate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 40%</td>
-                                <td> MSCI World</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        *Hasta 4Q2020 15%Citigroup Eurodeposit 3m, 30%Barclays
-                        Glob.Aggregate Bond Idx, 15%JPM EMBI Glob. USD, 10%Barclays US
-                        H.Y. Corp Bond Idx, 30%MSCI World
-                    </p>
-                    
-                </div>
-                <div class="asset__rent">
-                    <div class="rent__head">
-                        <h3> Rentabilidad neta (%) </h3>
-                        <label for="">
-                            31 dic 2021
-                            <button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </label>
-                    </div>
-                    <div class="rent__table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th valign="center"> YTD</th>
-                                    <th> 1 año </th>
-                                    <th> 3 años </th>
-                                    <th class="small-th-text"> Since Inception </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 6,46%</td>
-                                    <td> 8%</td>
-                                    <td> 10%</td>
-                                    <td> 12%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="asset__graph">
-                    <picture>
-                        <img src="../img/grafico-multi-asset.png" alt="graph">
-                    </picture>
-                    <p> Evolución temporal de una inversión de USD 1.000</p>
-                </div>
-                <div class="factsheet">
-                    <a href="#" class="link-blue"> 
-                        Descargar factsheet
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="asset__fund">
-                    <h3> El Fondo</h3>
-                    <table class="fund__table">
-                        <thead>
-                            <tr>
-                                <th> Since Inception (Oct 2012)</th>
-                                <th class="bg-light-blue"> Matrix</th>
-                                <th class="bg-light-blue"> Benchmark</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td> 2012 (desde Oct) </td>
-                                <td> 0.62% </td>
-                                <td> 1.31% </td>
-                            </tr>
-                            <tr>
-                                <td> 2013 </td>
-                                <td> 7.65% </td>
-                                <td> 6.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2014 </td>
-                                <td> 2.14% </td>
-                                <td> 2.16% </td>
-                            </tr>
-                            <tr>
-                                <td> 2015 </td>
-                                <td> -2.13% </td>
-                                <td> -1.98% </td>
-                            </tr>
-                            <tr>
-                                <td> 2016 </td>
-                                <td> 5.7% </td>
-                                <td> 5.58% </td>
-                            </tr>
-                            <tr>
-                                <td> 2017 </td>
-                                <td> 8.27% </td>
-                                <td> 10.52% </td>
-                            </tr>
-                            <tr>
-                                <td> 2018 </td>
-                                <td> -6.96% </td>
-                                <td> -3.99% </td>
-                            </tr>
-                            <tr>
-                                <td> 2019 </td>
-                                <td> 11.01% </td>
-                                <td> 13.39% </td>
-                            </tr>
-                            <tr>
-                                <td> 2020 </td>
-                                <td> 13.72% </td>
-                                <td> 11.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2021 </td>
-                                <td> 6.46% </td>
-                                <td> 7.51% </td>
-                            </tr>
-                            <tr>
-                                <td> 2022 </td>
-                                <td> -5.15% </td>
-                                <td> -6.11% </td>
-                            </tr>
-                            <tr>
-                                <td> total </td>
-                                <td> 46.96% </td>
-                                <td> 53.56% </td>
-                            </tr>
-                        </tbody>
-
-
-                    </table>
-
-                </div>
-            </div>
-
-        </section> -->
-
-
-
-
-
-
-
-
-
-        <!-- equity selection found -->
-        <section class="funds no-view-passw" id="equity">
-            <ul>
-                <li>
-                    <button class="bt-blue" onclick="show_asset()"> MULTI ASSET FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue bt-active"> EQUITY SELECTION FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue" onclick="show_special_close_equity()"> SPECIAL SITUATIONS FUND</button>
-                </li>
-            </ul>
-            <div class="funds__asset">
-                <div class="asset__img">
-                    <picture> 
-                        <img src="../img/man.png" alt="man with a graph">
-                    </picture>
-                </div>
-                <div class="asset__description">
-                    <p>
-                        El objetivo de inversión del fondo <strong> Equity Selection </strong> es el
-                        de apreciación de capital a través de la construcción
-                        de un portfolio de activos líquidos de renta fija y
-                        variable, con un retorno objetivo de Libor + 3 a 5%
-                        por año en un ciclo económico completo con un
-                        adecuado monitoreo del riesgo.
-                        <br><br>
-                        El fondo invierte 80% o más de sus activos en
-                        posiciones estratégicas de renta fija y acciones
-                        globales. En forma oportunística, el manager puede
-                        asignar hasta un 20% de los activos a posiciones
-                        tácticas en bonos, acciones, monedas y commodities
-                        para explotar la detección de activos desarbitrados
-                        y obtener rendimientos de corto plazo.
-                    </p>
-                </div>
-                <div class="asset__benchmark">
-                    <h3> Benchmark</h3>
-                    <table class="benchmark__table">
-                        <tbody>
-                            <tr>
-                                <td> 30%</td>
-                                <td> Barclays Global Aggregate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 15%</td>
-                                <td> JP Morgan EMBI Global USD</td>
-                            </tr>
-                            <tr>
-                                <td> 10%</td>
-                                <td> Barclays US High Yield Corporate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 40%</td>
-                                <td> MSCI World</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        *Hasta 4Q2020 15%Citigroup Eurodeposit 3m, 30%Barclays
-                        Glob.Aggregate Bond Idx, 15%JPM EMBI Glob. USD, 10%Barclays US
-                        H.Y. Corp Bond Idx, 30%MSCI World
-                    </p>
-                    
-                </div>
-                <div class="asset__rent">
-                    <div class="rent__head">
-                        <h3> Rentabilidad neta (%) </h3>
-                        <label for="">
-                            31 dic 2021
-                            <button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </label>
-                    </div>
-                    <div class="rent__table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th valign="center"> YTD</th>
-                                    <th> 1 año </th>
-                                    <th> 3 años </th>
-                                    <th class="small-th-text"> Since Inception </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 6,46%</td>
-                                    <td> 8%</td>
-                                    <td> 10%</td>
-                                    <td> 12%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="asset__graph">
-                    <picture>
-                        <img src="../img/grafico-multi-asset.png" alt="graph">
-                    </picture>
-                    <p> Evolución temporal de una inversión de USD 1.000</p>
-                </div>
-                <div class="factsheet">
-                    <a href="#" class="link-blue"> 
-                        Descargar factsheet
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="asset__fund">
-                    <h3> El Fondo</h3>
-                    <table class="fund__table">
-                        <thead>
-                            <tr>
-                                <th> Since Inception (Oct 2012)</th>
-                                <th class="bg-light-blue"> Matrix</th>
-                                <th class="bg-light-blue"> Benchmark</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td> 2012 (desde Oct) </td>
-                                <td> 0.62% </td>
-                                <td> 1.31% </td>
-                            </tr>
-                            <tr>
-                                <td> 2013 </td>
-                                <td> 7.65% </td>
-                                <td> 6.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2014 </td>
-                                <td> 2.14% </td>
-                                <td> 2.16% </td>
-                            </tr>
-                            <tr>
-                                <td> 2015 </td>
-                                <td> -2.13% </td>
-                                <td> -1.98% </td>
-                            </tr>
-                            <tr>
-                                <td> 2016 </td>
-                                <td> 5.7% </td>
-                                <td> 5.58% </td>
-                            </tr>
-                            <tr>
-                                <td> 2017 </td>
-                                <td> 8.27% </td>
-                                <td> 10.52% </td>
-                            </tr>
-                            <tr>
-                                <td> 2018 </td>
-                                <td> -6.96% </td>
-                                <td> -3.99% </td>
-                            </tr>
-                            <tr>
-                                <td> 2019 </td>
-                                <td> 11.01% </td>
-                                <td> 13.39% </td>
-                            </tr>
-                            <tr>
-                                <td> 2020 </td>
-                                <td> 13.72% </td>
-                                <td> 11.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2021 </td>
-                                <td> 6.46% </td>
-                                <td> 7.51% </td>
-                            </tr>
-                            <tr>
-                                <td> 2022 </td>
-                                <td> -5.15% </td>
-                                <td> -6.11% </td>
-                            </tr>
-                            <tr>
-                                <td> total </td>
-                                <td> 46.96% </td>
-                                <td> 53.56% </td>
-                            </tr>
-                        </tbody>
-
-
-                    </table>
-
-                </div>
-            </div>
-
-        </section>
-        <!-- special situation found -->
-        <section class="funds no-view-passw" id="special">
-            <ul>
-                <li>
-                    <button class="bt-blue " onclick="show_asset_close_special()"> MULTI ASSET FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue" onclick="show_equity_close_special()"> EQUITY SELECTION FUND</button>
-                </li>
-                <li>
-                    <button class="bt-blue bt-active"> SPECIAL SITUATIONS FUND</button>
-                </li>
-            </ul>
-            <div class="funds__asset">
-                <div class="asset__img">
-                    <picture> 
-                        <img src="../img/man.png" alt="man with a graph">
-                    </picture>
-                </div>
-                <div class="asset__description">
-                    <p>
-                        El objetivo de inversión del fondo <strong> Special Situations</strong> es el
-                        de apreciación de capital a través de la construcción
-                        de un portfolio de activos líquidos de renta fija y
-                        variable, con un retorno objetivo de Libor + 3 a 5%
-                        por año en un ciclo económico completo con un
-                        adecuado monitoreo del riesgo.
-                        <br><br>
-                        El fondo invierte 80% o más de sus activos en
-                        posiciones estratégicas de renta fija y acciones
-                        globales. En forma oportunística, el manager puede
-                        asignar hasta un 20% de los activos a posiciones
-                        tácticas en bonos, acciones, monedas y commodities
-                        para explotar la detección de activos desarbitrados
-                        y obtener rendimientos de corto plazo.
-                    </p>
-                </div>
-                <div class="asset__benchmark">
-                    <h3> Benchmark</h3>
-                    <table class="benchmark__table">
-                        <tbody>
-                            <tr>
-                                <td> 30%</td>
-                                <td> Barclays Global Aggregate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 15%</td>
-                                <td> JP Morgan EMBI Global USD</td>
-                            </tr>
-                            <tr>
-                                <td> 10%</td>
-                                <td> Barclays US High Yield Corporate Bond Index</td>
-                            </tr>
-                            <tr>
-                                <td> 40%</td>
-                                <td> MSCI World</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        *Hasta 4Q2020 15%Citigroup Eurodeposit 3m, 30%Barclays
-                        Glob.Aggregate Bond Idx, 15%JPM EMBI Glob. USD, 10%Barclays US
-                        H.Y. Corp Bond Idx, 30%MSCI World
-                    </p>
-                    
-                </div>
-                <div class="asset__rent">
-                    <div class="rent__head">
-                        <h3> Rentabilidad neta (%) </h3>
-                        <label for="">
-                            31 dic 2021
-                            <button>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                        </label>
-                    </div>
-                    <div class="rent__table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th valign="center"> YTD</th>
-                                    <th> 1 año </th>
-                                    <th> 3 años </th>
-                                    <th class="small-th-text"> Since Inception </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 6,46%</td>
-                                    <td> 8%</td>
-                                    <td> 10%</td>
-                                    <td> 12%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="asset__graph">
-                    <picture>
-                        <img src="../img/grafico-multi-asset.png" alt="graph">
-                    </picture>
-                    <p> Evolución temporal de una inversión de USD 1.000</p>
-                </div>
-                <div class="factsheet">
-                    <a href="#" class="link-blue"> 
-                        Descargar factsheet
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-                </div>
-
-                <div class="asset__fund">
-                    <h3> El Fondo</h3>
-                    <table class="fund__table">
-                        <thead>
-                            <tr>
-                                <th> Since Inception (Oct 2012)</th>
-                                <th class="bg-light-blue"> Matrix</th>
-                                <th class="bg-light-blue"> Benchmark</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td> 2012 (desde Oct) </td>
-                                <td> 0.62% </td>
-                                <td> 1.31% </td>
-                            </tr>
-                            <tr>
-                                <td> 2013 </td>
-                                <td> 7.65% </td>
-                                <td> 6.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2014 </td>
-                                <td> 2.14% </td>
-                                <td> 2.16% </td>
-                            </tr>
-                            <tr>
-                                <td> 2015 </td>
-                                <td> -2.13% </td>
-                                <td> -1.98% </td>
-                            </tr>
-                            <tr>
-                                <td> 2016 </td>
-                                <td> 5.7% </td>
-                                <td> 5.58% </td>
-                            </tr>
-                            <tr>
-                                <td> 2017 </td>
-                                <td> 8.27% </td>
-                                <td> 10.52% </td>
-                            </tr>
-                            <tr>
-                                <td> 2018 </td>
-                                <td> -6.96% </td>
-                                <td> -3.99% </td>
-                            </tr>
-                            <tr>
-                                <td> 2019 </td>
-                                <td> 11.01% </td>
-                                <td> 13.39% </td>
-                            </tr>
-                            <tr>
-                                <td> 2020 </td>
-                                <td> 13.72% </td>
-                                <td> 11.25% </td>
-                            </tr>
-                            <tr>
-                                <td> 2021 </td>
-                                <td> 6.46% </td>
-                                <td> 7.51% </td>
-                            </tr>
-                            <tr>
-                                <td> 2022 </td>
-                                <td> -5.15% </td>
-                                <td> -6.11% </td>
-                            </tr>
-                            <tr>
-                                <td> total </td>
-                                <td> 46.96% </td>
-                                <td> 53.56% </td>
-                            </tr>
-                        </tbody>
-
-
-                    </table>
-
-                </div>
-            </div>
-
-        </section>
     </main>
-    <!-- fontawesome -->
+    <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/374c27b176.js" crossorigin="anonymous"></script>
-    <!-- my scripts  -->
+    <!-- MY SCRIPTS  -->
     <script src="../js/app.js"></script>
 </body>
 </html>

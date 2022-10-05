@@ -139,6 +139,42 @@
         <!-- popup user -->
         <div class="login" id="login-popup">
             <div class="user-container">
+                <div class="change-password" id="change-password">
+                    <div class="back">
+                        <button onclick="close_change_pass()"> 
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="login__info">
+                        <form action="" class="info__form no-margin">
+                            <label for=""> Correo electrónico</label>
+                            <input type="email" placeholder="Ingrese su dirección correo electrónico">
+                        </form>
+                        <div class="bt-form-container" id="bt-login">
+                            <!-- <a href="./pages/client-access.html"> -->
+                                <button class="bt-blue" onclick="remove_bt_login()"> ENVIAR</button>
+                            <!-- </a> -->
+                        </div>
+                        <div class="bt-form-container not-show" id="bt-load">
+                                <button class="bt-blue hola"> 
+                                    <div class="entering">
+                                        <p> ENVIANDO </p>
+                                        <div id="load"></div>
+                                    </div>
+                                </button>
+                        </div>
+                        
+                        <div class="bt-form-container">
+                            <label for="" class="error-message"> Correo electrónico ingresado incorrectamente</label>
+                        </div>
+                        <!-- <div class="bt-form-container">
+                            <label for="" class="succes-message"> Usuario creado </label>
+                        </div> -->
+                    </div>
+    
+                </div>
+
+
                 <div class="user-c"> 
                     <button class="bt-close-login" onclick="close_login()"> x</button>
                     <div class="login__info" id="login_user">
@@ -156,7 +192,10 @@
                             <input type="email" placeholder="Ingrese su dirección correo electrónico">
                             <div class="message-label">
                                 <label for=""> Contraseña </label>
-                                <label for="" class="reset-passw"> ¿La olvidaste?</label>
+                                <button>
+                                    <label for="" class="reset-passw" onclick="close_change_pass()"> ¿La olvidaste?</label>
+
+                                </button>
                             </div>
                             <div class="password-container" id="view-passw">
                                 <input type="password" placeholder="••••••••••" style="-webkit-text-security: square;">

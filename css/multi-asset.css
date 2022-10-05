@@ -21,12 +21,15 @@
     background-color: var(--color-light-blue-2);
 }
 
+.container-funds {
+    height: 100%;
+}
+
 .asset__fund {
     width: 100%;
     flex-direction: column;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .fund__table{
@@ -52,26 +55,196 @@
     background-color: var(--color-gray-table);
 }
 
+.funds{
+    margin: 2rem 2rem;
+}
+
+.funds h2 {
+    margin: 6rem 0 2rem 0;
+    font-size:2rem;
+    font-weight: 900;
+    color: var(--color-gray-banner);
+}
+
+.funds h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-gray-banner);
+}
+
+.funds ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.funds__asset{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.asset__graph {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.asset__graph p {
+    margin-top: 1rem;
+}
+
+.asset__rent {
+    width: 100%;
+}
+
+.asset__rent label {
+    position: relative;
+    top: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.rent__head{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.rent__table {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.rent__table table{
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin: auto;
+}
+
+.rent__table th{
+    background-color: var(--color-light-blue-2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+.rent__table td{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.rent__table td:nth-child(even){
+    background-color: var(--color-gray-table);
+}
+
+.asset__description {
+    margin-top: 2rem;
+}
+
+.asset-container-1{
+    width: 100%;
+}
+
+.asset-container-3 {
+    width: 100%;
+}
+
+.asset-container-2 {
+    width: 100%;
+    text-align: center;
+}
+
+.asset-container-2 p {
+    padding-top: 2rem;
+}
 
 @media (min-width: 481px) and (max-width: 768px) {
-
+    .asset__graph {
+        width: 80%; 
+    }
 }
+
 @media (min-width: 769px) and (max-width: 960px) {
     .fund__table {
         width: 80%;
     }
 
-    /* .fund__table table{
-        width: 100%;
-    } */
+    .asset__graph {
+        width: 70%; 
+    }
+
+    .rent__table table{
+        width: 80%;
+    }
 }
 
 @media (min-width: 961px) {
-
-    .asset__description {
-        margin: 2rem 8rem;
+    .asset__graph {
+        width: 70%; 
     }
 
+    .asset__description {
+        margin-top: 4rem;
+    }
 
+    .asset__graph img{
+        width: 100%;
+        height: 500px; 
+    }
 
+    .funds__asset {
+        margin-top: 5rem;
+        width: 100%;
+        flex-wrap: nowrap;
+        column-gap: 1rem;
+    }
+
+    ._align-end {
+        align-items: flex-end;
+    }
+
+    .asset-container-1{
+        width: 30%;
+    }
+
+    .asset-container-2{
+        width: 50%;
+        text-align: center;
+    }
+
+    .asset-container-3{
+        width: 30%;
+        display: grid;
+        row-gap: 4rem;
+    }
+
+    .asset-container-2 p{
+        padding-top: 3.2rem;
+    }
+    
+    .funds ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        gap: 1rem;
+    }
+
+    .justify-center ul{
+        justify-content: center;
+    }
+    
+    .founds {
+        margin-top: 1rem;
+        padding-bottom: 5rem;
+    }
 }
