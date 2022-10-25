@@ -1,9 +1,9 @@
-.info {
+.contact-section {
     width: 100%;
     padding: 5rem 2rem 2rem 2rem;
 }
 
-.info__form{
+.form-contact{
     width: 100%;
     font-size: 1.6rem;
     display: grid;
@@ -16,23 +16,28 @@
     margin-top: 3rem;
 }
 
-.info__form input{
+.form-contact input{
     width: 100%;
     background-color: var(--color-light-blue-2);
+    outline: solid transparent 0.02rem;
     padding: 1em;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.6rem;
     display: block;
 }
 
-.info__form textarea{
+.form-contact textarea{
     background-color: var(--color-light-blue-2);
     padding: 1rem;
     width: 100%;
 }
 
-.info__form textarea, input::placeholder{
+.form-contact textarea, input::placeholder{
     font-size: 1.4rem;
+}
+
+.form-contact input:focus{
+    outline: solid var(--color-blue) 0.02rem;
 }
 
 .bt-form-container {
@@ -41,8 +46,24 @@
     margin-top: 2rem;
 }
 
+.container-input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.container-textarea {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+/* .margin-top-sub-2 {
+    margin-top: -2rem;
+} */
+
 @media (min-width: 961px) {
-    .container {
+    .container-input {
         display: grid;
         row-gap: 1rem;
         width: 45%;

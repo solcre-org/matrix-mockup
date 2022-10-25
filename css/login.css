@@ -1,0 +1,259 @@
+.login-popup {
+    top: 0rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    background-color: var(--color-white);
+    left: -1300px;
+    opacity: 0;
+    transition: left 1000ms, opacity 1000ms;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.switch-login-create span {
+    font-size: 2rem;
+}
+
+.switch-login-create {
+    margin-left: -1.6rem;
+    margin-bottom: 1rem;
+}
+
+.bt-switch-login-create {
+    font-size: 1.6rem;
+    padding: 1em;
+    color: var(--color-blue);
+}
+
+.bt-color-gray {
+    color: var(--color-gray-bt);
+}
+
+.login {
+    width: 100%;
+}
+
+.create {
+    width: 100%;
+}
+
+.form-login {
+    width: 100%;
+}
+
+.form-contact input::placeholder{
+    font-size: 1.4rem;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-container input{
+    width: 100%;
+    background-color: var(--color-light-blue-2);
+    outline: solid transparent 0.02rem;
+    padding: 1em;
+    width: 100%;
+    font-size: 1.6rem;
+    display: block;
+}
+
+.input-container input:focus {
+    outline: solid var(--color-blue) 0.02rem;
+
+}
+
+.input-password input {
+    padding-right: 3rem;
+}
+
+.label-container {
+    font-size: 1.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message {
+    color: var(--color-red);
+    font-size: 1.6rem;
+}
+
+.bt-forgot {
+    color: var(--color-blue);
+}
+
+.password{
+    position: relative;
+}
+
+.bt-eye {
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: var(--color-gray-banner);
+}
+
+.bt-eye-no {
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+    color: var(--color-gray-banner);
+}
+
+.bt-form-container {
+    width: 100%;
+    align-items: center;
+}
+
+.invalid-credentials{
+    margin-top: 2rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.bar-x {
+    display: block;
+    background-color: transparent;
+    width: 25px;
+    height: 5px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 1000ms, background-color 1000ms;
+}
+
+.bt-x {
+    padding: 1.5rem;
+}
+
+.bar-x::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    background-color: var(--color-black);
+    transform: rotate(-45deg);
+}
+
+.bar-x::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    background-color: var(--color-black);
+    transform: rotate(45deg);
+}
+
+.bt-dropdown-login {
+    position: absolute;
+    right: 0.5rem;
+    top: 4.7rem;
+    z-index: 10000;
+}
+
+.forgot-password {
+    position: absolute;
+    z-index: 10000000;
+    width: 100%;
+    height: 100%;
+    left: -1300px;
+    background-color: var(--color-white);
+    padding: 2rem;
+    padding-top: 15rem;
+    display: flex;
+    /* transition: left 1000ms; */
+}
+
+.left-for-login {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    /* transition: left 1000ms, opacity 1000ms; */
+}
+
+.display-none {
+    display: none;
+}
+
+@media (min-width: 431px) {
+    .login-content {
+        width: 80%;
+    }
+
+    .forgot-password {
+        padding: 4rem;
+    }
+}
+
+@media (min-width: 961px) {
+    .no-menu-header {
+        display: none;
+    }
+    .view {
+        display: block;
+        right: -1rem;
+        top: -5rem;
+        font-size: 1.6rem;
+    }
+
+    .login-popup {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: left 0ms, opacity 0ms;
+    }
+
+    .forgot-password {
+        transition: left 0ms, opacity 0ms;
+        padding: 4rem;
+        padding-top: 11rem;
+
+    }
+
+    .login-content {
+        background-color: var(--color-white);
+        margin: auto;
+        width: 500px;
+        padding: 4rem;
+        position: relative;
+    }
+
+    .bar-x::before {
+        background-color: var(--color-white);
+    }
+    
+    .bar-x::after {
+        background-color: var(--color-white);
+    }
+
+    .create {
+        flex-direction: column;
+    }
+}
+
+
+
+

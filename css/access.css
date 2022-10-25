@@ -1,15 +1,9 @@
-.welcome__access{
-    background-color: var(--color-light-blue-1);
-    position: absolute;
-    right: 0;
-    color: var(--color-gray-banner);
-    padding: 1.2rem;
-    padding-right: 9rem;
-    margin-top: -3rem;
-    border-radius: 1rem 0 0 1rem;
+.hs-access {
+    bottom: -2rem;
+    width: 30%;
 }
 
-.user__info {
+.user-info {
     display: flex;
     flex-direction: column;
     width: 20rem;
@@ -19,9 +13,11 @@
     margin: 4rem auto 2rem auto;
     text-align: center;
     row-gap: 1rem;
+
 }
 
-.main h3 {
+.user-info span {
+    /* display: inline-block; */
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--color-gray-banner);
@@ -34,11 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 2rem;
-}
-
-.h3-download{
-    width: 100%;
+    row-gap: 1rem;
 }
 
 .download table {
@@ -54,6 +46,7 @@
     vertical-align:middle;
     padding: 1rem;
 }
+
 .download td{
     padding: 1rem;
     font-size: 1.5rem;
@@ -67,31 +60,37 @@
     color: var(--color-gray-banner);
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-
-}
-@media (min-width: 769px) and (max-width: 960px) {
-    .download table {
-        width: 80%;
-    }
+.download h3 {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-gray-banner);
 }
 
 @media (min-width: 961px) {
-    .container-access{
+    .access-section{
         display: flex;
     }
 
-    .user__info {
+    .user-info {
         padding-top: 3rem;
         text-align: none;
         height: 14rem;
-        margin-left: 0;
+        /* margin-left: 0; */
     }
 
     .download {
         width: 80%;
         margin-top: 2rem;
         text-align: center;
+        /* background-color:blueviolet; */
+    }
+
+    .download h3 {
+        width: 70%;
+        text-align: left;
+        padding-left: 1rem;
+        /* background-color: aqua; */
     }
     
     .download table{

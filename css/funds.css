@@ -1,0 +1,268 @@
+.funds-section {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+    /* height: 200px; */
+    /* background-color: bisque; */
+}
+
+.funds-nav {
+    /* width: auto; */
+    padding: 2rem;
+    margin: auto;
+    /* background-color: aquamarine; */
+    
+}
+
+.funds-ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* background-color: bisque; */
+}
+
+
+.funds-text {
+    width: 100%;
+    padding-bottom: 2rem;
+    /* background-color: cornflowerblue; */
+}
+
+.funds-generic {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    /* height: 500px; */
+    /* background-color: cadetblue; */
+}
+
+.funds-generic h3 {
+    font-size: 1.8rem;
+    color: var(--color-gray-banner);
+    font-weight: 900;
+}
+
+.description-section {
+    width: 100%;
+    margin-bottom: 2rem;
+    /* background-color: violet; */
+}
+
+.description-section img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.description-section p {
+    margin: 2rem 0 1rem 0;
+}
+
+.graph-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    /* background-color: chocolate; */
+
+}
+
+.graph-section p {
+    /* background-color: wheat; */
+    margin-top: 2rem;
+    /* padding: 1rem 0; */
+}
+
+.graph {
+    width: 100%;
+    height: 300px;
+    /* background-color: brown; */
+    padding: 1.5rem;
+    display: flex;
+    border: 1px solid var(--color-gray-banner);
+}
+
+.graph p {
+    margin: auto;
+}
+
+.table-section {
+    width: 100%;
+    /* background-color: coral; */
+    /* padding-top: 2rem; */
+}
+
+.table-section-title-and-date {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* .table-section-title-and-date h3 {
+    font-size: 1.8rem;
+    color: var(--color-gray-banner);
+    font-weight: 900;
+} */
+
+.table-section-title-and-date span {
+    display: inline-block;
+    /* color: var(--color-gray-banner); */
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin: auto;
+    /* background-color: yellow; */
+}
+
+.table th{
+    background-color: var(--color-light-blue-2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+.table td{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.table td:nth-child(even){
+    background-color: var(--color-gray-table);
+}
+
+.the-fund-table{
+    margin: auto;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin-top: 1rem;
+}
+
+.the-fund-table th{
+    font-size: 1.5rem;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+.the-fund-table td{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.the-fund-table tr:nth-child(even){
+    background-color: var(--color-gray-table);
+}
+
+.benchmark-table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    margin-top: 1rem;
+}
+
+.benchmark-table td{
+    font-size: 1.5rem;
+    vertical-align:middle;
+    row-gap: 1rem;
+    padding: 1rem;
+}
+
+.benchmark-table td:nth-child(odd){
+    background-color: var(--color-light-blue-2);
+}
+
+.benchmark-text {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    /* background-color: violet; */
+}
+
+
+
+
+
+
+@media (min-width: 961px) {
+    .funds-ul {
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    .funds-generic {
+        height: 100%;
+        width: auto;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .graph {
+        height: 400px;
+    }
+
+    .description-section{
+        margin-bottom: 0;
+        width: 30%;
+    }
+
+    .table-section{
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .graph-section{
+        width: 37%;
+        margin-bottom: 0;
+    }
+
+    .special-table-section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 8rem;
+    }
+
+    .special-graph {
+        height: 600px;
+    }
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-padding-top {
+    padding-top: 0;
+}
+
+.multi-asset {
+    display: none;
+}
+
+.equity-selection {
+    display: none;
+}
+
+.special-situations {
+    display: none;
+}
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-none {
+    align-items: inherit;
+}

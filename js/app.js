@@ -4,69 +4,7 @@ let body = document.body;
 
 
 //=============================================================================
-//  change between funds
-
-let equity = document.getElementById('equity');
-let asset = document.getElementById('asset');
-let special = document.getElementById('special');
-
-function show_equity(){
-    // console.log(equity);
-    equity.classList.toggle('no-view-passw');
-    asset.classList.toggle('no-view-passw');
-}
-
-function show_special(){
-    // console.log(special);
-    special.classList.toggle('no-view-passw');
-    asset.classList.toggle('no-view-passw');
-}
-
-function show_asset(){
-    // console.log(special);
-    asset.classList.toggle('no-view-passw');
-    equity.classList.toggle('no-view-passw');
-}
-
-function show_special_close_equity(){
-    special.classList.toggle('no-view-passw');
-    equity.classList.toggle('no-view-passw')
-
-}
-
-function show_asset_close_special() {
-    asset.classList.toggle('no-view-passw');
-    special.classList.toggle('no-view-passw');
-}
-
-function show_equity_close_special() {
-    equity.classList.toggle('no-view-passw')
-    special.classList.toggle('no-view-passw');
-}
-
 //=============================================================================
-// show and hide password
-
-let view_passw = document.getElementById('no-view-passw');
-let no_view_passw = document.getElementById('view-passw');
-let view_passw_2 = document.getElementById('no-view-passw-2');
-let no_view_passw_2 = document.getElementById('view-passw-2');
-let view_passw_3 = document.getElementById('no-view-passw-3');
-let no_view_passw_3 = document.getElementById('view-passw-3');
-
-
-function show_passw() {
-    view_passw.classList.toggle('view-passw');
-    no_view_passw.classList.toggle('no-view-passw');
-    view_passw_2.classList.toggle('view-passw');
-    no_view_passw_2.classList.toggle('no-view-passw');
-}
-
-function show_passw_2() {
-    view_passw_3.classList.toggle('view-passw');
-    no_view_passw_3.classList.toggle('no-view-passw');
-}
-
 //=============================================================================
 // switch login between create
 
@@ -159,7 +97,7 @@ function show_navbar_movile() {
         nav.classList.toggle('show-nav-flex');
         logo_white.classList.toggle('show-logo');
         logo_blue.classList.toggle('show-logo');
-        bt_color.classList.toggle('color-negro');
+        bt_color.classList.toggle('color-black');
     }
     // console.log(nav)
 }
